@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100vh;
+    background-color: orange;
+}
+
+h1 {
+    margin: 20px;
+}
+
+.carrossel {
+    width: 600px;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    margin-left: 20px; 
+}
+
+.slides {
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+.slide {
+    flex: 0 0 100%;
+}
+
+img {
+    object-fit: cover;
+    display: block;
+}

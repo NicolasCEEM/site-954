@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DATENA ATACA MARÇAL</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p style="color:red">BREAKING NEWS!!!!!!!!!! </p>
+    <p>Vilão ataca protagonista, e Marçal é levado em estado crítico para o hospital.</p>
+    <div class="carrossel">
+        <div class="slides">
+            <div class="slide"><img src="imagem1.jpeg" alt="img1"></div>
+            <div class="slide"><img src="imagem2.jpeg" alt="img2"></div>
+            <div class="slide"><img src="imagem3.jpg" alt="img3"></div>
+        </div>
+    </div>
+
+    <script>
+        const slides = document.querySelector('.slides');
+        let index = 0;
+        const slideCount = document.querySelectorAll('.slide').length;
+
+        function showNextSlide() {
+            index = (index + 1) % slideCount;
+            slides.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        setInterval(showNextSlide, 4000);
+    </script>
+</body>
+</html>
